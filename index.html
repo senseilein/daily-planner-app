@@ -22,6 +22,9 @@
     <title>Work Day Scheduler</title>
   </head>
 
+<!-- TODO: Check why save icon <i> is not rendered -->
+<!-- ? Add data attribute to each timeblock -->
+
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
@@ -30,50 +33,50 @@
     </header>
     <main class="container-fluid col-lg-8 col-sm-12 mx-auto">
      <form id="form">
-      <div class="form-group row justify-content-center">
-        <label for="9am" class="label col-1 time-block hour row-elements pt-4"><span>9</span> AM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="9am" class="label col-1 hour row-elements pt-4"><span>9</span> AM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="9am" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="10am" class="label col-1 time-block hour row-elements pt-4"><span>10</span> AM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="10am" class="label col-1  hour row-elements pt-4"><span>10</span> AM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="10am" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="11am" class="label col-1 time-block hour row-elements pt-4"><span>11</span> AM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="11am" class="label col-1  hour row-elements pt-4"><span>11</span> AM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="11am" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="12pm" class="label col-1 time-block hour row-elements pt-4"><span>12</span> PM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="12pm" class="label col-1  hour row-elements pt-4"><span>12</span> PM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="12pm" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="1pm" class="label col-1 time-block hour row-elements pt-4"><span>1</span> PM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="1pm" class="label col-1  hour row-elements pt-4"><span>1</span> PM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="1pm" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="2pm" class="label col-1 time-block hour row-elements pt-4"><span>2</span> PM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="2pm" class="label col-1  hour row-elements pt-4"><span>2</span> PM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="2pm" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="3pm" class="label col-1 time-block hour row-elements pt-4"><span>3</span> PM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="3pm" class="label col-1  hour row-elements pt-4"><span>3</span> PM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="3pm" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="4pm" class="label col-1 time-block hour row-elements pt-4"><span>4</span> PM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="4pm" class="label col-1  hour row-elements pt-4"><span>4</span> PM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="4pm" type="text" value="">
         <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
       </div>
-      <div class="form-group row justify-content-center">
-        <label for="5pm" class="label col-1 time-block hour row-elements pt-4"><span>5</span> PM</label>
+      <div class="form-group row justify-content-center time-block">
+        <label for="5pm" class="label col-1  hour row-elements pt-4"><span>5</span> PM</label>
         <input class="form-control form-control-lg col-8 row-elements  bg-light " id="5pm" type="text" value="">
-        <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
+        <button type="button" class="btn btn-primary col-1 saveBtn row-elements"></button>
       </div>
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
