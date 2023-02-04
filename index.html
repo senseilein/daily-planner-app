@@ -28,10 +28,14 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
-
+    <main class="container-fluid col-lg-8 col-sm-12 mx-auto">
+     <form id="form">
+      <div class="form-group row justify-content-center">
+        <label for="example" class="label col-1 time-block hour row-elements pt-4"><span>9</span> AM</label>
+        <input class="form-control form-control-lg col-8 row-elements  bg-light " id="example" type="text" value="">
+        <button type="button" class="btn btn-primary col-1 saveBtn row-elements"><i class="fa-thin fa-floppy-disk"></i></button>
+      </div>
+    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
