@@ -43,17 +43,12 @@ SO THAT I can manage my time effectively
 
 This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery. I modified the starter code so that the app:
 
-[] Displays the current day at the top of the calender when a user opens the planner.
-
-[] Presents timeblocks for standard business hours when the user scrolls down.
-
-[] Color-codes each timeblock based on past, present, and future when the timeblock is viewed.
-
-[] Allows a user to enter an event when they click a timeblock
-
-[] Saves the event in local storage when the save button is clicked in that timeblock.
-
-[] Persists events between refreshes of a page
+- [x] Displays the current day at the top of the calender when a user opens the planner.
+- [x] Presents timeblocks for standard business hours when the user scrolls down.
+- [x] Color-codes each timeblock based on past, present, and future when the timeblock is viewed.
+- [x] Allows a user to enter an event when they click a timeblock
+- [x] Saves the event in local storage when the save button is clicked in that timeblock.
+- [x] Persists events between refreshes of a page
 
 ## ✅ TECHNOLOGY USED
 
