@@ -47,7 +47,7 @@ function colourTimeBlocksBasedOnTime() {
   // const currentTime = parseInt(moment().format("H"));
   // console.log(`currentTime is ${currentTime}`);
   $(".form-control").each(function () {
-    const currentTime = 12;
+    const currentTime = parseInt(moment().format("H"));
     console.log(`currentTime is ${currentTime}`);
     const thisBlock = $(this);
     // console.log($(this));
@@ -73,6 +73,9 @@ initLocalStorage();
 displayStoredEvents();
 
 colourTimeBlocksBasedOnTime();
+
+// update colourBlocks every 5 minutes
+const checkTime = setInterval(colourTimeBlocksBasedOnTime, 300000);
 
 // save event
 const saveBtn = $(".form-group > button");
