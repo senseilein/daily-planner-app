@@ -3,9 +3,6 @@ const today = moment().format("dddd, MMMM D ");
 const currentDay = $("#currentDay");
 currentDay.text(today);
 
-// Grab elements
-const saveBtn = $(".form-group > button");
-
 function initLocalStorage() {
   // Initialize Local Storage
   let eventStorage = JSON.parse(localStorage.getItem("eventStorage"));
@@ -46,11 +43,39 @@ function displayStoredEvents() {
   });
 }
 
+function colourTimeBlocksBasedOnTime() {
+  // const currentTime = parseInt(moment().format("H"));
+  // console.log(`currentTime is ${currentTime}`);
+  $(".form-control").each(function () {
+    const currentTime = 12;
+    console.log(`currentTime is ${currentTime}`);
+    const thisBlock = $(this);
+    // console.log($(this));
+    const thisTimeBlock = thisBlock.data("time");
+    // console.log(typeof thisTimeBlock);
+
+    if (thisTimeBlock < currentTime) {
+      thisBlock.addClass("past");
+    } else if (thisTimeBlock > currentTime) {
+      thisBlock.removeClass("past");
+      thisBlock.addClass("future");
+    } else {
+      thisBlock.addClass("present");
+      thisBlock.removeClass("past");
+      thisBlock.removeClass("future");
+    }
+  });
+}
+
 /*---------------------------------------------------------*/
 initLocalStorage();
 
 displayStoredEvents();
 
+colourTimeBlocksBasedOnTime();
+
+// save event
+const saveBtn = $(".form-group > button");
 saveBtn.on("click", function () {
   const input = $(this).siblings(".form-control");
   const inputValue = input.val();
@@ -62,14 +87,3 @@ saveBtn.on("click", function () {
     storeEventInLocalStorage(inputValue, inputID);
   }
 });
-
-// Work with time
-const currentTime = moment().format("h a");
-// console.log(currentTime);
-const currentTime2 = moment().format("H a");
-// console.log(currentTime2);
-// let ooo = moment("9", "hh").format("HH");
-// console.log(ooo);
-
-// let kkk = moment().hour().format("HH");
-// console.log(kkk);
