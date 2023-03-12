@@ -9,6 +9,7 @@ textarea {
   border: none;
   resize: none;
   color: #000000;
+  font-weight: 900;
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -27,7 +28,6 @@ textarea {
 
 .time-block {
   text-align: center;
-  /* border-radius: 15px; */
 }
 
 .row {
@@ -47,21 +47,19 @@ textarea {
   border-bottom: 1px dashed #000000;
 }
 
-.past {
+.past,
+.past:focus {
   background-color: #d3d3d3;
-  /* background-color: #2d078d; */
-  color: white;
 }
 
-.present {
+.present,
+.present:focus {
   background-color: #ff6961;
-  color: white;
 }
 
-.future {
+.future,
+.future:focus {
   background-color: #77dd77;
-  color: white;
-  border: 6px dotted purple;
 }
 
 .saveBtn {
@@ -75,4 +73,8 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.form-control {
+  color: #000000;
 }
