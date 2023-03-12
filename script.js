@@ -13,7 +13,6 @@ function initLocalStorage() {
     localStorage.setItem("eventStorage", JSON.stringify([]));
   }
 }
-initLocalStorage();
 
 function storeEventInLocalStorage(inputValue, inputID) {
   const event = { inputValue, inputID };
@@ -33,6 +32,24 @@ function storeEventInLocalStorage(inputValue, inputID) {
 
   localStorage.setItem("eventStorage", JSON.stringify(eventStorage));
 }
+
+function displayStoredEvents() {
+  let eventStorage = JSON.parse(localStorage.getItem("eventStorage"));
+
+  eventStorage.forEach((eventObj) => {
+    let iD = `#${eventObj.inputID}`;
+    let value = eventObj.inputValue;
+
+    //Put back event on the page after refresh
+    let targetedTextArea = $(iD);
+    targetedTextArea.attr("value", value);
+  });
+}
+
+/*---------------------------------------------------------*/
+initLocalStorage();
+
+displayStoredEvents();
 
 saveBtn.on("click", function () {
   const input = $(this).siblings(".form-control");
