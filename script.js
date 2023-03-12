@@ -3,8 +3,8 @@ const today = moment().format("dddd, MMMM D ");
 const currentDay = $("#currentDay");
 currentDay.text(today);
 
+/*-------------------------FUNCTIONS--------------------------------*/
 function initLocalStorage() {
-  // Initialize Local Storage
   let eventStorage = JSON.parse(localStorage.getItem("eventStorage"));
   if (!eventStorage) {
     localStorage.setItem("eventStorage", JSON.stringify([]));
@@ -37,22 +37,19 @@ function displayStoredEvents() {
     let iD = `#${eventObj.inputID}`;
     let value = eventObj.inputValue;
 
-    //Put back event on the page after refresh
+    //Put back events on the page after refresh
     let targetedTextArea = $(iD);
     targetedTextArea.attr("value", value);
   });
 }
 
 function colourTimeBlocksBasedOnTime() {
-  // const currentTime = parseInt(moment().format("H"));
-  // console.log(`currentTime is ${currentTime}`);
   $(".form-control").each(function () {
     const currentTime = parseInt(moment().format("H"));
-    console.log(`currentTime is ${currentTime}`);
+
     const thisBlock = $(this);
-    // console.log($(this));
+
     const thisTimeBlock = thisBlock.data("time");
-    // console.log(typeof thisTimeBlock);
 
     if (thisTimeBlock < currentTime) {
       thisBlock.addClass("past");
@@ -67,9 +64,11 @@ function colourTimeBlocksBasedOnTime() {
   });
 }
 
-/*---------------------------------------------------------*/
+/*-------------------------START PROGRAMME--------------------------------*/
+
 initLocalStorage();
 
+// retrieve events from localStorage and render them on the page
 displayStoredEvents();
 
 colourTimeBlocksBasedOnTime();
@@ -77,13 +76,12 @@ colourTimeBlocksBasedOnTime();
 // update colourBlocks every 5 minutes
 const checkTime = setInterval(colourTimeBlocksBasedOnTime, 300000);
 
-// save event
+// save events when corresponding button is clicked
 const saveBtn = $(".form-group > button");
 saveBtn.on("click", function () {
   const input = $(this).siblings(".form-control");
   const inputValue = input.val();
   const inputID = input.attr("id");
-  console.log(inputValue);
 
   if (inputValue) {
     input.attr("value", inputValue);
