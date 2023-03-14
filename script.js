@@ -44,18 +44,20 @@ function displayStoredEvents() {
 }
 
 function colourTimeBlocksBasedOnTime() {
+  const currentTime = parseInt(moment().format("H"));
   $(".form-control").each(function () {
-    const currentTime = parseInt(moment().format("H"));
-
     const thisBlock = $(this);
 
     const thisTimeBlock = thisBlock.data("time");
 
     if (thisTimeBlock < currentTime) {
       thisBlock.addClass("past");
+      thisBlock.removeClass("present");
+      thisBlock.removeClass("future");
     } else if (thisTimeBlock > currentTime) {
-      thisBlock.removeClass("past");
       thisBlock.addClass("future");
+      thisBlock.removeClass("present");
+      thisBlock.removeClass("past");
     } else {
       thisBlock.addClass("present");
       thisBlock.removeClass("past");
