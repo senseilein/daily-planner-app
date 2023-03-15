@@ -25,6 +25,8 @@ This is a simple calendar application that allows a user to save events for each
 
 ### 🔍 Preview
 
+[You can visit the deployed page via this link](https://senseilein.github.io/daily-planner-app/)
+
 The following image shows the web application's appearance and functionality:
 
 ![Project image](./images/daily-planner.png)
